@@ -19,7 +19,9 @@ const searchFood = () => {
           fetch(url)
           .then(res => res.json())
           .then(data => displaySearchResult(data.meals));
-         }    
+          errorMessage.innerText = '';
+         }   
+          
 }
 
 const displaySearchResult = meals => {
